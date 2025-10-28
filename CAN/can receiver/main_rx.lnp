@@ -1,0 +1,10 @@
+--cpu ARM7TDMI
+".\startup.o"
+".\can2_driver.o"
+".\delay.o"
+".\main_nodeb_rx.o"
+".\uart0_driver.o"
+--strict --scatter ".\main_rx.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\main_rx.map" -o .\main_rx.axf
